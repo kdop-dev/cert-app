@@ -14,7 +14,7 @@ Teste
 helm install --namespace adsantos --create-namespace cert-app ./cert-app --dry-run --debug
 ```
 
-### Instalar
+Pra valer
 
 ```bash
 helm install --namespace adsantos --create-namespace cert-app ./cert-app
