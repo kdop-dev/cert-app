@@ -9,7 +9,7 @@ RUN apk add --no-cache pcre
 WORKDIR /app
 COPY ./app /app
 COPY ./requirements.txt /app
-RUN mkdir -p /tmp/cert-app/pdf
+RUN mkdir -p /tmp/inovacao/cert-app/pdf
 RUN pip install -r /app/requirements.txt
 RUN apk del .build-dependencies && rm -rf /var/cache/apk/*
 EXPOSE 5000
