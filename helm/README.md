@@ -8,6 +8,8 @@ helm create cert-app
 
 ## Instalar
 
+> Esse deployment utiliza ingress. Verifique se o seu cluster tem um ingress-controller instalado. Você pode verificar executando o comando `kubectl get namespaces` e procurar por algum com o nome ingress ou `kubectl get ingress --all-namespaces` para verificar se tem alguma configuração usando o ingress. Caso não tenha nenhum instalado e você tem permissão para instalá-lo, siga as instruções em: [Ingress - Installation Guide](https://kubernetes.github.io/ingress-nginx/deploy/).
+
 Teste
 
 ```bash
