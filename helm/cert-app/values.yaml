@@ -8,7 +8,7 @@ image:
   repository: kdop/cert-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.0.2"
+  tag: "0.0.4"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -49,9 +49,6 @@ ingress:
       paths: 
       - /adsantos/cert-app(/|$)(.*)
   tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
 
 resources:
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -70,7 +67,7 @@ autoscaling:
   minReplicas: 1
   maxReplicas: 100
   targetCPUUtilizationPercentage: 80
-  # targetMemoryUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80
 
 nodeSelector: {}
 

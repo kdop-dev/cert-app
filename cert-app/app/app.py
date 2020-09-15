@@ -6,7 +6,7 @@ app = Flask(__name__)
 pdf_w=210
 pdf_h=297
 
-CLIENT_PDF="/tmp/cert-app/pdf"
+CLIENT_PDF="/tmp/inovacao/cert-app/pdf"
 
 class PDF(FPDF):
     def lines(self):
@@ -72,8 +72,9 @@ def create_cert(name):
     return filename
 
 @app.route("/")
+@app.route("/health")
 def health():
-    return "ok"
+    return "Cert-app Ok!"
 
 @app.route("/get-cert")
 def get_pdf():
