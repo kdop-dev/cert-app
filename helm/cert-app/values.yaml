@@ -48,6 +48,9 @@ ingress:
     - host: learn.kdop.net
       paths: 
       - /adsantos/cert-app(/|$)(.*)
+    - host: kdop-learn.krthomolog.com.br
+      paths:
+      - /adsantos/cert-app(/|$)(.*)
   tls: []
 
 resources:

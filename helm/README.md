@@ -80,5 +80,5 @@ export SERVICE_IP=$(kubectl get svc --namespace adsantos cert-app --template "{{
 
 echo http://$SERVICE_IP:80
 
-http://13.89.140.64/get-cert?p=Gabriel%20Tiberio
+http://13.89.140.64/get-cert?p=Gabriel
 ```
