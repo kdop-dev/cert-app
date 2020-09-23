@@ -75,7 +75,7 @@ def create_cert(name):
 @app.route("/")
 @app.route("/health")
 def health():
-    return f"Cert-app {os.environ.get('ambiente')} Ok!"
+    return f"Cert-app  in ns {os.environ.get('ambiente')}: Ok!"
 
 @app.route("/get-cert")
 def get_pdf():
