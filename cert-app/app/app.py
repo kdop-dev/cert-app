@@ -1,3 +1,4 @@
+import os
 from flask import send_file, send_from_directory, safe_join, abort, request
 from fpdf import FPDF
 from flask import Flask
@@ -74,7 +75,7 @@ def create_cert(name):
 @app.route("/")
 @app.route("/health")
 def health():
-    return "Cert-app Ok!"
+    return f"Cert-app {os.environ.get('ambiente')} Ok!"
 
 @app.route("/get-cert")
 def get_pdf():

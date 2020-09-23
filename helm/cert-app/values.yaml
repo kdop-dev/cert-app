@@ -8,7 +8,7 @@ image:
   repository: kdop/cert-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.0.4"
+  tag: "0.0.5"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -47,11 +47,16 @@ ingress:
   hosts:
     - host: learn.kdop.net
       paths: 
-      - /adsantos/cert-app(/|$)(.*)
+      - /<seu namespace>/cert-app(/|$)(.*)
     - host: kdop-learn.krthomolog.com.br
       paths:
-      - /adsantos/cert-app(/|$)(.*)
+      - /<seu namespace>/cert-app(/|$)(.*)
   tls: []
+
+environments:
+  env:
+    - name: ambiente
+      value: "<seu namespace>"
 
 resources:
   # We usually recommend not to specify default resources and to leave this as a conscious
