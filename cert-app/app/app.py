@@ -7,7 +7,7 @@ app = Flask(__name__)
 pdf_w=210
 pdf_h=297
 
-CLIENT_PDF="/tmp/inovacao/cert-app/pdf"
+CLIENT_PDF="certs"
 
 class PDF(FPDF):
     def lines(self):
