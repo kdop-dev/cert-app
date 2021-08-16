@@ -9,6 +9,13 @@ flask run
 ```
 
 ```bash
+cd kdop/cert-app
+docker build -t kdop/cert-app:0.0.3 .
+
+docker push kdop/cert-app:0.0.3
+```
+
+```bash
 docker run -p 5000:5000 kdop/cert-app:0.0.2
 ```
 
