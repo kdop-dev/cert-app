@@ -10,13 +10,13 @@ flask run
 
 ```bash
 cd kdop/cert-app
-docker build -t kdop/cert-app:0.0.3 .
+docker build -t kdop/cert-app:0.0.4 .
 
-docker push kdop/cert-app:0.0.3
+docker push kdop/cert-app:0.0.4
 ```
 
 ```bash
-docker run -p 5000:5000 kdop/cert-app:0.0.2
+docker run -p 5000:5000 kdop/cert-app:0.0.4
 ```
 
 ## Testing

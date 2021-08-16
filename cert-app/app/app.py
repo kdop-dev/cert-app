@@ -25,7 +25,7 @@ class PDF(FPDF):
             self.set_xy(0.0, 40.0)
             self.set_text_color(100, 100, 100)
             self.set_font('Balista', 'R', 14)
-            self.cell(w=210.0, h=40.0, align='C', txt="Pílula de inovação - Workshop interativo K8s", border=0)
+            self.cell(w=210.0, h=40.0, align='C', txt="Workshop interativo K8s", border=0)
 
     def texts(self, name):
             with open(name,'rb') as xy:
@@ -68,7 +68,8 @@ def create_cert(name):
     pdf.participant_name(name)
     pdf.congratulations()
     pdf.set_author('Anderson Santos')
-    filename = f'{CLIENT_PDF}/{name}-cert.pdf'
+    #filename = f'{CLIENT_PDF}/{name}-cert.pdf'
+    filename = f'{name}-cert.pdf'
     pdf.output(filename,'F')
     return filename
 
@@ -86,7 +87,7 @@ def get_pdf():
 
     try:
         return send_file(filename, as_attachment=True)
-        # return send_from_directory(app.config["CLIENT_PDF"], filename=filename, as_attachment=True)
+        #return send_from_directory(app.config["CLIENT_PDF"], filename=filename, as_attachment=True)
     except FileNotFoundError:
         abort(404)
 
